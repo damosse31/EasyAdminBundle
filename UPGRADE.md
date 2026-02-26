@@ -99,6 +99,16 @@ yield FormField::addFieldset('...');
 
 The following contract interfaces changed:
 
+## `Contracts\Field\FieldInterface`
+
+```php
+// Before (4.x)
+public static function new(string $propertyName, ?string $label = null);
+
+// After (5.x)
+public static function new(string $propertyName, TranslatableInterface|string|bool|null $label = null);
+```
+
 ### `Contracts\Context\AdminContextInterface`
 
 ```php
